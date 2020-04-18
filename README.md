@@ -35,3 +35,6 @@
 |画像|image|登録されたつぶやきに含まれる画像|
 |マイデザイン|design|登録されたつぶやきに含まれる「あつまれどうぶつの森」のマイデザイン|
 
+## データモデル
+
+![entity-relationship-diagram](https://raw.githubusercontent.com/aximov/witness-me/master/doc/uml/entity-relationship.png)
