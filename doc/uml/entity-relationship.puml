@@ -1,0 +1,58 @@
+@startuml
+hide empty members
+
+entity User { 
+    * user_id: number
+    --
+    * user_name: text 
+    maker_id: number
+}
+
+entity Maker {
+    * maker_id: number
+    --
+    * maker_name: text
+}
+
+entity Tweet {
+    * tweet_id: number
+    --
+    * tweet_url: text
+    * content: text
+    * user_id: number <<FK>>
+}
+
+entity Registered_tweet {
+    * tweet_id: number
+    --
+    * content: text
+    * user_id: number <<FK>>
+    is_ACNH: bool
+    contain_image: bool
+}
+
+entity Image {
+    * image_id: number <<generated>>
+    --
+    * image_url: text
+    * tweet_id: number <<FK>>
+    is_design: bool
+}
+
+entity Design {
+    * design_id: number
+    --
+    * image_id: number <<FK>>
+    * maker_id: number <<FK>>
+    user_id: number <<FK>>
+}
+
+User ||-o| Maker
+Maker ||--o{ Design
+User ||--o{ Tweet
+User ||--o{ Registered_tweet
+Tweet ||--|| Registered_tweet
+Registered_tweet ||--o{ Image
+Image ||--o| Design
+
+@enduml
