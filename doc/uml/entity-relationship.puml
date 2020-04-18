@@ -12,6 +12,7 @@ entity Maker {
     * maker_id: number
     --
     * maker_name: text
+    user_id: number <<FK>>
 }
 
 entity Tweet {
@@ -44,7 +45,6 @@ entity Design {
     --
     * image_id: number <<FK>>
     * maker_id: number <<FK>>
-    user_id: number <<FK>>
 }
 
 User ||-o| Maker
