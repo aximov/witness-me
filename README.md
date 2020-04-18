@@ -39,3 +39,29 @@
 ## データモデル
 
 ![entity-relationship-diagram](https://raw.githubusercontent.com/aximov/witness-me/master/doc/uml/entity-relationship.png)
+
+## ページ構成
+
+- トップ/みんなの登録済みマイデザイン一覧/検索ページ
+- マイデザイン登録ページ
+- 自分の登録済みマイデザイン一覧ページ
+- 登録済のマイデザイン登録解除ページ
+
+## ページの URL 一覧
+
+|パス|メソッド|ページ内容|
+|---|---|---|
+| / | GET | トップ/みんなの登録済みマイデザイン一覧/検索ページ |
+| /designs | GET | 自分の登録済みマイデザイン一覧ページ |
+| /login | GET | ログインページ |
+| /logout | GET | ログアウトページ |
+
+## Web API の URL 一覧
+
+|パス|メソッド|処理内容|利用方法|
+| /designs?register=1 | POST | マイデザイン登録 | フォーム |
+| /designs/:designId?unregister=1 | POST | マイデザイン登録解除 | フォーム |
+
+## モジュール設計
+
+Ruby on Rails を用いる。
