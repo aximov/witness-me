@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: witness_me_development
+  database: witness_me
+  username: postgres
+  password: postgres
+  host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
