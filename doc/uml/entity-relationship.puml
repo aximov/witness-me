@@ -21,13 +21,6 @@ entity Tweet {
     * tweet_url: text
     * content: text
     * user_id: number <<FK>>
-}
-
-entity Registered_tweet {
-    * tweet_id: number
-    --
-    * content: text
-    * user_id: number <<FK>>
     is_ACNH: bool
     contain_image: bool
 }
@@ -50,9 +43,7 @@ entity Design {
 User ||-o| Maker
 Maker ||--o{ Design
 User ||--o{ Tweet
-User ||--o{ Registered_tweet
-Tweet ||--|| Registered_tweet
-Registered_tweet ||--o{ Image
+Tweet ||--o{ Image
 Image ||--o| Design
 
 @enduml
