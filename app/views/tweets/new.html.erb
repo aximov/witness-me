@@ -1,4 +1,3 @@
-<h1><%= link_to 'Witness me', root_path %></h1>
 <h2>マイデザインを新しく登録する</h2>
 <%= form_with scope: :tweet, url: tweets_path, local: true do |form| %>
   <% if @tweet.errors.any? %>
@@ -21,4 +20,3 @@
     <%= form.submit %>
   </p>
 <% end %>
-<%= link_to 'ツイート一覧', tweets_path %>

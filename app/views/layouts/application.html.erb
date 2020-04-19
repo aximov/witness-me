@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WitnessMe</title>
+    <title>Witness me</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-
   <body>
-    <%= yield %>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="<%= root_path%>" class="brand-logo"><i class="material-icons">brush</i>Witness me</a>
+          <ul id="nav-mobile" class="right">
+            <li><a href="<%= tweets_path %>" title="登録されたツイート一覧"><i class="material-icons">view_module</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

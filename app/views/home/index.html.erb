@@ -1,7 +1,21 @@
-<h1>
-  <h1><%= link_to 'Witness me', root_path %></h1>
-</h1>
-<p>「あつまれどうぶつの森」のマイデザインを共有しよう</p>
-<p>「あつまれどうぶつの森」では、自分が作成したマイデザインを Twitter へ投稿できます。<br>
-  このサービスでは、マイデザインを投稿したツイートを登録することで、自分や他の人のマイデザインを一覧できます。</p>
-<%= link_to "共有されたツイート一覧", controller: 'tweets' %>
+<div>
+  <h2>「あつまれどうぶつの森」のマイデザインを共有しよう</h2>
+  <p class="flow-text">「あつまれどうぶつの森」では、自分が作成したマイデザインを Twitter へ投稿できます。<br>
+    このサービスでは、マイデザインを投稿したツイートを登録することで、自分や他の人のマイデザインを一覧できます。</p>
+</div>
+<div class="row">
+  <div class="col s4">
+    マイデザインの披露
+  </div>
+  <div class="col s4">
+    インスピレーションの共有
+  </div>
+  <div class="col s4">
+    自動登録
+  </div>
+</div>
+<div class="fixed-action-btn">
+  <a href="<%= new_tweet_path%>" class="btn-floating btn-large pulse" title="新しくマイデザインを登録する">
+    <i class="large material-icons">add</i>
+  </a>
+</div>
