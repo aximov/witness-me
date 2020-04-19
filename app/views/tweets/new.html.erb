@@ -1,10 +1,10 @@
-<h2>マイデザインを新しく登録する</h2>
+<h3>マイデザインを新しく登録する</h3>
 <%= form_with scope: :tweet, url: tweets_path, local: true do |form| %>
   <% if @tweet.errors.any? %>
     <div id="error_explanation">
-      <h3>
+      <h4>
         おっと！うっかりミスがあるようです。登録できませんでした。
-      </h3>
+      </h4>
       <ul>
         <% @tweet.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -13,10 +13,10 @@
     </div>
   <% end %>
   <p>
-    <%= form.label :url, "マイデザインを投稿したツイートの URL" %><br>
-    <%= form.text_area :url %>
+    <%= form.label :url, "マイデザインを投稿したツイートの URL を入力してください" %><br>
+    <%= form.text_area :url, :class=>"materialize-textarea" %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit "ツイートを登録", :class=>"btn-large waves-effect waves-light" %>
   </p>
 <% end %>

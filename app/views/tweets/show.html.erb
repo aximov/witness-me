@@ -1,13 +1,14 @@
-<h2>登録されたツイートの詳細</h2>
+<h3>登録されたツイートの詳細</h3>
 <p>
   <strong>URL:</strong>
-  <%= @tweet.url %>
+  <%= link_to @tweet.url, @tweet.url %>
 </p>
 <div>
   <%= button_to 'このツイートを登録解除する',
                 @tweet,
                 method: :delete,
-                data: { confirm: '本当に登録解除しますか？' } %>
+                data: { confirm: '本当に登録解除しますか？' },
+                :class=>"btn red waves-effect waves-light" %>
 </div>
 <div class="fixed-action-btn">
   <a href="<%= new_tweet_path%>" class="btn-floating btn-large" title="新しくマイデザインを登録する">
