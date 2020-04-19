@@ -2,3 +2,7 @@
 $primary-color: color("green", "base") !default;
 $secondary-color: color("yellow", "darken-3") !default;
 @import "materialize";
+
+.nobreak{
+  display:inline-block;
+}

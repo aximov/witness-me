@@ -1,21 +1,32 @@
 <div>
-  <h2>「あつまれどうぶつの森」のマイデザインを共有しよう</h2>
-  <p class="flow-text">「あつまれどうぶつの森」では、自分が作成したマイデザインを Twitter へ投稿できます。<br>
-    このサービスでは、マイデザインを投稿したツイートを登録することで、自分や他の人のマイデザインを一覧できます。</p>
+  <h3><i class="medium material-icons">eco</i><span class="nobreak">マイデザインを</span>共有しよう</h3>
+  <p class="flow-text">「あつまれどうぶつの森」で作成したマイデザインは、エイブルシスターズから Twitter に投稿できます。</p>
 </div>
 <div class="row">
-  <div class="col s4">
-    マイデザインの披露
+  <div class="col s4 center">
+    <div>
+      <i class="large material-icons">unarchive</i>
+    </div>
+    <h4>マイデザインの披露</h4>
+    <p class="flow-text">このサービスでは、マイデザインを投稿したツイートを登録することで、マイデザインを他の人と見せ合うことができます。<br>
+    </div>
+    <div class="col s4 center">
+      <div>
+        <i class="large material-icons">dashboard</i>
+      </div>
+      <h4>インスピレーションの共有</h4>
+      <p class="flow-text">登録されたマイデザインを一覧できます。</p>
+    </div>
+    <div class="col s4 center">
+      <div>
+        <i class="large material-icons">autorenew</i>
+      </div>
+      <h4>自動登録</h4>
+      <p class="flow-text">Twitter 認証をすると、あなたの Twitter アカウントに投稿したマイデザインを自動で登録できます。（現在 Twitter API 許可待ちです）</p>
+    </div>
   </div>
-  <div class="col s4">
-    インスピレーションの共有
+  <div class="fixed-action-btn">
+    <a href="<%= new_tweet_path%>" class="btn-floating btn-large pulse" title="新しくマイデザインを登録する">
+      <i class="large material-icons">add</i>
+    </a>
   </div>
-  <div class="col s4">
-    自動登録
-  </div>
-</div>
-<div class="fixed-action-btn">
-  <a href="<%= new_tweet_path%>" class="btn-floating btn-large pulse" title="新しくマイデザインを登録する">
-    <i class="large material-icons">add</i>
-  </a>
-</div>
