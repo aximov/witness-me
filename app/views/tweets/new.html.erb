@@ -1,0 +1,24 @@
+<h1><%= link_to 'Witness me', root_path %></h1>
+<h2>マイデザインを新しく登録する</h2>
+<%= form_with scope: :tweet, url: tweets_path, local: true do |form| %>
+  <% if @tweet.errors.any? %>
+    <div id="error_explanation">
+      <h3>
+        おっと！うっかりミスがあるようです。登録できませんでした。
+      </h3>
+      <ul>
+        <% @tweet.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= form.label :url, "マイデザインを投稿したツイートの URL" %><br>
+    <%= form.text_area :url %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%= link_to 'ツイート一覧', tweets_path %>

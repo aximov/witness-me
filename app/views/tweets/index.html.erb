@@ -1,0 +1,17 @@
+<h1><%= link_to 'Witness me', root_path %></h1>
+<%= link_to '新しくツイートを登録する', new_tweet_path %>
+<p> 登録されたツイート一覧 </p>
+<div>
+  <ul>
+    <% @tweets.each do |tweet| %>
+      <ul>
+        <li><%= tweet.url %></li>
+        <li><%= link_to 'ツイート詳細', tweet_path(tweet) %></li>
+        <li><%= link_to 'このツイートを登録解除する',
+                tweet_path(tweet),
+                method: :delete,
+                data: { confirm: '本当に登録解除しますか？' } %></li>
+      </ul>
+    <% end %>
+  </ul>
+</div>
