@@ -6,6 +6,8 @@
 
 動作確認を行った環境
 
+- Ubuntu bionic
+- Chrome
 - Ruby 2.7.1 (rbenv 管理)
 - Rails 6.0.2.2
 - PostgreSQL 10.12
