@@ -2,6 +2,18 @@
 
 「あつまれどうぶつの森」のマイデザインを共有しよう
 
+## 動作環境
+
+動作確認を行った環境
+
+- Ruby 2.7.1 (rbenv 管理)
+- Rails 6.0.2.2
+- PostgreSQL 10.12
+
+CSS フレームワークは Materialize を使っています。
+
+Heroku に[デモサイト](https://young-plains-83775.herokuapp.com/)をデプロイしています。
+
 ## 基本要求
 
 - 「あつまれどうぶつの森」で作成したマイデザインを Twitter 経由で共有、一覧できる
