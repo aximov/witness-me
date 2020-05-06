@@ -2,6 +2,29 @@
 
 「あつまれどうぶつの森」のマイデザインを共有しよう
 
+## 動作環境
+
+動作確認を行った環境
+
+- Ubuntu bionic
+- Chrome
+- Ruby 2.7.1 (rbenv 管理)
+- Rails 6.0.2.2
+- PostgreSQL 10.12
+
+CSS フレームワークは Materialize を使っています。
+
+Heroku に[デモサイト](https://young-plains-83775.herokuapp.com/)をデプロイしています。
+
+## 開発環境の構築
+
+1. Ruby, Rails, PostgreSQL をインストール
+1. `$ git clone git@github.com:aximov/witness-me.git`
+1. `$ cd witness-me`
+1. `$ bundle install` (結構時間がかかることがあります)
+1. `$ yarn install`
+1. `$ rails server` or `rails s` でサーバー起動
+
 ## 基本要求
 
 - 「あつまれどうぶつの森」で作成したマイデザインを Twitter 経由で共有、一覧できる
@@ -67,7 +90,7 @@
 
 ## モジュール設計
 
-Ruby on Rails を用いる。
+Rails のモジュール構成を用いる。
 
 ### Model モジュール一覧
 
