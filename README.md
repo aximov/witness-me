@@ -16,6 +16,15 @@ CSS フレームワークは Materialize を使っています。
 
 Heroku に[デモサイト](https://young-plains-83775.herokuapp.com/)をデプロイしています。
 
+## 開発環境の構築
+
+1. Ruby, Rails, PostgreSQL をインストール
+1. `$ git clone git@github.com:aximov/witness-me.git`
+1. `$ cd witness-me`
+1. `$ bundle install` (結構時間がかかることがあります)
+1. `$ yarn install`
+1. `$ rails server` or `rails s` でサーバー起動
+
 ## 基本要求
 
 - 「あつまれどうぶつの森」で作成したマイデザインを Twitter 経由で共有、一覧できる
