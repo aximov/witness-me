@@ -23,6 +23,7 @@ Heroku に[デモサイト](https://young-plains-83775.herokuapp.com/)をデプ�
 1. `$ cd witness-me`
 1. `$ bundle install` (結構時間がかかることがあります)
 1. `$ yarn install`
+1. `$ rails db:create`
 1. `$ rails server` or `rails s` でサーバー起動
 
 ## 基本要求
