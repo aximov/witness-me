@@ -1,7 +1,6 @@
 <h3>登録されたツイートの詳細</h3>
 <p>
-  <strong>URL:</strong>
-  <%= link_to @tweet.url, @tweet.url %>
+  <%= sanitize @tweet_embedded %>
 </p>
 <div>
   <%= button_to 'このツイートを登録解除する',

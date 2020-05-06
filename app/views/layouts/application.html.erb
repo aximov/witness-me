@@ -4,8 +4,8 @@
     <title>Witness me</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
@@ -22,5 +22,6 @@
     <div class="container">
       <%= yield %>
     </div>
+    <script src="https://platform.twitter.com/widgets.js"></script>
   </body>
 </html>

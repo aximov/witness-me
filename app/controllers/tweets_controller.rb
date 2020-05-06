@@ -1,10 +1,21 @@
+require 'oembed'
+
 class TweetsController < ApplicationController
+    def initialize
+        OEmbed::Providers.register(OEmbed::Providers::Twitter)
+        OEmbed::Providers::Twitter.endpoint += "?omit_script=true"
+        super
+    end
+
     def index
-        @tweets = Tweet.all
+        @tweets = Tweet.all.map { |tweet|
+            {"record" => tweet, "embed" => OEmbed::Providers.get(tweet.url).html }
+        }
     end
 
     def show
         @tweet = Tweet.find(params[:id])
+        @tweet_embedded = OEmbed::Providers.get(@tweet.url).html
     end
 
     def new
