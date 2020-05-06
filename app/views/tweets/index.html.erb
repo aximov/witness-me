@@ -4,7 +4,9 @@
     <% @tweets.each do |tweet| %>
       <div class="card hoverable">
         <div class="card-content">
-          <p>URL: <%= link_to tweet.url, tweet.url %></p>
+          <div>
+            <%= sanitize tweet %>
+          </div>
         </div>
         <div class="card-action">
           <%= link_to 'ツイート詳細', tweet_path(tweet), :data => { :turbolinks => 'false'} %>

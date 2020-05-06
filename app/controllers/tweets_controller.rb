@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
     end
 
     def index
-        @tweets = Tweet.all
+        @tweets = Tweet.all.map { |tweet| OEmbed::Providers.get(tweet.url).html }
     end
 
     def show
