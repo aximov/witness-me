@@ -1,5 +1,8 @@
 <h3>登録されたツイートの詳細</h3>
 <p>
+  <%= sanitize @tweet_embedded %>
+</p>
+<p>
   <strong>URL:</strong>
   <%= link_to @tweet.url, @tweet.url %>
 </p>
