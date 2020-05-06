@@ -2,10 +2,6 @@
 <p>
   <%= sanitize @tweet_embedded %>
 </p>
-<p>
-  <strong>URL:</strong>
-  <%= link_to @tweet.url, @tweet.url %>
-</p>
 <div>
   <%= button_to 'このツイートを登録解除する',
                 @tweet,
