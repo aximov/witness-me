@@ -5,13 +5,13 @@
       <div class="card hoverable">
         <div class="card-content">
           <div>
-            <%= sanitize tweet %>
+            <%= sanitize tweet["embed"] %>
           </div>
         </div>
         <div class="card-action">
-          <%= link_to 'ツイート詳細', tweet_path(tweet), :data => { :turbolinks => 'false'} %>
+          <%= link_to 'ツイート詳細', tweet_path(tweet["record"]) %>
           <%= link_to '登録解除する',
-                tweet_path(tweet),
+                tweet_path(tweet["record"]),
                 method: :delete,
                 data: { confirm: '本当に登録解除しますか？' } %>
         </div>
