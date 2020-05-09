@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Witness me</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
-  <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <a href="<%= root_path%>" class="left brand-logo"><i class="material-icons">brush</i>Witness me</a>
-          <ul id="nav-mobile" class="right">
-            <li><a href="<%= tweets_path %>" title="登録されたツイート一覧"><i class="material-icons">view_module</i></a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="container">
-      <%= yield %>
-    </div>
-    <script src="https://platform.twitter.com/widgets.js"></script>
-  </body>
+
+<head>
+  <title>Witness me</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_pack_tag 'application' %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="<%= root_path%>" class="left brand-logo"><i class="material-icons">brush</i>Witness me</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="<%= tweets_path %>" title="登録されたツイート一覧"><i class="material-icons">view_module</i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <%= yield %>
+  </div>
+  <script src="https://platform.twitter.com/widgets.js"></script>
+</body>
+
 </html>
