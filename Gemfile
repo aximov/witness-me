@@ -25,6 +25,8 @@ gem "materialize-sass", "~> 1.0.0"
 gem "ruby-oembed"
 gem "dotenv-rails"
 gem "omniauth-twitter"
+gem "twitter"
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
